@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D and A Real Estate - Your Dream Home Awaits</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #60a5fa;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-10 rounded-b-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">D and A Real Estate</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#properties" class="text-gray-700 hover:text-blue-600 transition duration-300">Properties</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="#customer-care" class="text-gray-700 hover:text-blue-600 transition duration-300">Customer Care</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-20 hidden"></div>
+        <div id="mobile-menu" class="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-6 z-30 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <nav class="flex flex-col space-y-4 mt-10">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 transition duration-300 py-2 border-b border-gray-200">Home</a>
+                <a href="#properties" class="text-gray-700 hover:text-blue-600 transition duration-300 py-2 border-b border-gray-200">Properties</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300 py-2 border-b border-gray-200">About Us</a>
+                <a href="#customer-care" class="text-gray-700 hover:text-blue-600 transition duration-300 py-2 border-b border-gray-200">Customer Care</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-cover bg-center h-screen flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/007bff/ffffff?text=Your+Dream+Home+Awaits');">
+            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            <div class="container mx-auto text-center z-10 p-4">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                    Find Your Perfect Place with <span class="text-blue-400">D and A Real Estate</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 animate-fade-in-up delay-200">
+                    Connecting you with the finest properties and unparalleled service.
+                </p>
+                <a href="#properties" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
+                    Explore Properties
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Properties Section -->
+        <section id="properties" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">Featured Properties</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Property Card 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/600x400/3498db/ffffff?text=Modern+Villa" alt="Modern Villa" class="w-full h-60 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Luxury Modern Villa</h3>
+                            <p class="text-gray-600 mb-4">4 Beds | 3 Baths | 2,500 sqft</p>
+                            <p class="text-blue-600 text-xl font-bold mb-4">$750,000</p>
+                            <p class="text-gray-700 text-sm mb-4">
+                                A stunning modern villa with breathtaking views, spacious interiors, and state-of-the-art amenities. Perfect for families.
+                            </p>
+                            <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-5 rounded-lg transition duration-300">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Cozy+Apartment" alt="Cozy Apartment" class="w-full h-60 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Cozy Downtown Apartment</h3>
+                            <p class="text-gray-600 mb-4">2 Beds | 2 Baths | 1,200 sqft</p>
+                            <p class="text-blue-600 text-xl font-bold mb-4">$320,000</p>
+                            <p class="text-gray-700 text-sm mb-4">
+                                Located in the heart of the city, this apartment offers convenience and comfort with easy access to shops and restaurants.
+                            </p>
+                            <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-5 rounded-lg transition duration-300">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Property Card 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Family+Home" alt="Family Home" class="w-full h-60 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-2">Spacious Family Home</h3>
+                            <p class="text-gray-600 mb-4">5 Beds | 4 Baths | 3,000 sqft</p>
+                            <p class="text-blue-600 text-xl font-bold mb-4">$600,000</p>
+                            <p class="text-gray-700 text-sm mb-4">
+                                Ideal for a growing family, this home boasts a large backyard, multiple living areas, and a friendly neighborhood.
+                            </p>
+                            <a href="#" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-5 rounded-lg transition duration-300">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/800x600/f39c12/ffffff?text=About+Us" alt="About D and A Real Estate" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-6 text-blue-700">About D and A Real Estate</h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        At D and A Real Estate, we believe in making your property journey seamless and rewarding. With years of experience and a deep understanding of the market, we are dedicated to providing personalized service, expert advice, and access to an exclusive portfolio of properties.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-4">
+                        Whether you are buying, selling, or investing, our team of passionate professionals is here to guide you every step of the way. Your satisfaction is our top priority.
+                    </p>
+                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow-md transition duration-300 transform hover:scale-105">
+                        Get in Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Care Section -->
+        <section id="customer-care" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-6 md:px-12">
+                <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">Dedicated Customer Care</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                    <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">How Can We Help You?</h3>
+                        <p class="text-gray-700 mb-6">
+                            Our customer care team is here to assist you with any inquiries, concerns, or support you may need. We are committed to providing prompt and helpful responses.
+                        </p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684L10.5 9l2.59-2.59a1 1 0 011.21-.043l3.593 3.593a1 1 0 01-.043 1.21L14.5 13.5l2.59 2.59a1 1 0 01.043 1.21l-3.593 3.593a1 1 0 01-1.21.043L10.5 15l-2.59 2.59a1 1 0 01-.948.684H5a2 2 0 01-2-2V5z"></path></svg>
+                                <strong>Phone:</strong> +1 (555) 123-4567
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.9 5.26a2 2 0 002.2 0L21 8m-18 4v7a2 2 0 002 2h14a2 2 0 002-2v-7M3 8l7.9 5.26a2 2 0 002.2 0L21 8"></path></svg>
+                                <strong>Email:</strong> customercare@dandarealestate.com
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-blue-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <strong>Address:</strong> 123 Property Lane, Cityville, State 12345
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-8 transform hover:scale-105 transition duration-300">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Your Name</label>
+                                <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Your Email</label>
+                                <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="john.doe@example.com">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Inquiry about a property">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-md transition duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (re-using for general contact) -->
+        <section id="contact" class="py-16 bg-white">
+            <div class="container mx-auto px-6 md:px-12 text-center">
+                <h2 class="text-4xl font-bold mb-6 text-blue-700">Contact Us</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Ready to find your dream home or have a property to sell? Get in touch with D and A Real Estate today!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-8">
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300 flex-1 max-w-sm">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Call Us</h3>
+                        <p class="text-gray-700 mb-2">Monday - Friday, 9 AM - 5 PM</p>
+                        <p class="text-2xl font-bold text-gray-900">+1 (555) 123-4567</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300 flex-1 max-w-sm">
+                        <h3 class="text-xl font-semibold mb-3 text-blue-600">Email Us</h3>
+                        <p class="text-gray-700 mb-2">We'll respond within 24 hours</p>
+                        <p class="text-2xl font-bold text-gray-900">info@dandarealestate.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-10 px-6 md:px-12 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <div class="mb-6">
+                <a href="#" class="text-3xl font-bold text-blue-400">D and A Real Estate</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-8 text-gray-400">
+                <a href="#home" class="hover:text-blue-400 transition duration-300">Home</a>
+                <a href="#properties" class="hover:text-blue-400 transition duration-300">Properties</a>
+                <a href="#about" class="hover:text-blue-400 transition duration-300">About Us</a>
+                <a href="#customer-care" class="hover:text-blue-400 transition duration-300">Customer Care</a>
+                <a href="#contact" class="hover:text-blue-400 transition duration-300">Contact</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 D and A Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (document.getElementById('mobile-menu').classList.contains('translate-x-0')) {
+                    document.getElementById('mobile-menu').classList.remove('translate-x-0');
+                    document.getElementById('mobile-menu').classList.add('translate-x-full');
+                    document.getElementById('mobile-menu-overlay').classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            mobileMenuOverlay.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+        });
+
+        mobileMenuOverlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
